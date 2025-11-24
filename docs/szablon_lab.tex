@@ -1,0 +1,184 @@
+% szablon sprawozdania z dnia 2024-10-01
+\documentclass{article} % mwart , article
+\usepackage[utf8]{inputenc}	
+\usepackage{polski}	
+\usepackage[T1]{fontenc}
+\frenchspacing	
+\usepackage{indentfirst}
+% PAKIETY DO MODYFIKACJI SRONY
+\usepackage{fancybox} 
+\usepackage{geometry}
+\geometry{
+	total={170mm,250mm},
+	left=20mm,
+	top=20mm,
+}
+\usepackage{listings}
+\usepackage{float}
+% TABELA
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{makecell}
+% INNE
+\usepackage{color, colortbl}
+\definecolor{Gray}{gray}{0.9}
+\usepackage{lipsum}
+% USTAWIENIA SUBSECTION
+\usepackage[compact]{titlesec}
+\titleformat{\subsection}[runin]
+{\normalfont\large\bfseries}{\thesubsection}{1em}{}[{\\[0,5em]}]
+\titlespacing*{\subsection}{1cm}{1em}{0em}
+% dodanie FORCEINDENT
+\newcommand{\forceindent}{\leavevmode{\parindent=1cm\indent}} %
+
+
+% TYTUŁ, DATY ORAZ DANE OSOBY OPRACOWUJĄCEJ SPRAWOZDANIE
+\def\AuthorFirstName{\uppercase{Magdalena}}
+\def\AuthorLastName{\uppercase{Machacka}}
+\def\Title{ \\ Praca z git i github\\ \\ }
+\def\DateOfExecution{2025-11-24}
+\def\DateOfDeliver{2025-11-24}
+%
+%
+\begin{document}	
+	%\fancypage{\setlength{\fboxsep}{0pt}\doublebox}{}	
+	\noindent
+	\def\arraystretch{1.5} \small
+% TABELA Z DANYMI
+	\begin{table}
+		\resizebox{\textwidth}{!}{\begin{tabular}{|p{2cm}|p{4cm}|p{3cm}|p{3cm}|l|}
+		\hline 
+		\multirow{4}{*}{\makecell[l]{\includegraphics[width=2cm]{image/ModLogoPO}\\\includegraphics[width=2cm]{image/ModLogoWE}}} & PRZEDMIOT: & \multicolumn{3}{l|}{ \makecell[l]{\noalign{\vskip3pt}PRZEDMIOT WYBIERALNY XIV:\\ NARZ\k{E}DZIA INFORMATYCZNE W PRAKTYCE \\IN\.{Z}YNIERSKIEJ}}\tabularnewline
+		\cline{2-5} \cline{3-5} \cline{4-5} \cline{5-5} 
+		& KIERUNEK STUDIÓW: & INFORMATYKA & ROK STUDIÓW: & IV\tabularnewline
+		\cline{2-5} \cline{3-5} \cline{4-5} \cline{5-5} 
+		& ROK AKADEMISKI: & 2020/2021 & SEMESTR: & 7\tabularnewline
+		\cline{2-5} \cline{3-5} \cline{4-5} \cline{5-5} 
+		& TEMAT: & \multicolumn{3}{l|}{\makecell[l]{\noalign{\vskip3pt} \Title }}\tabularnewline
+		\hline 
+		IMI\k{E}: & \textbf{\AuthorFirstName} & \multicolumn{2}{l|}{DATA WYKONANIA \'{C}WICZENIA: }  & \DateOfExecution \tabularnewline
+		\hline 
+		NAZWISKO: & \textbf{\AuthorLastName} & \multicolumn{2}{l|}{DATA ODDANIA SPRAWOZDANIA:} & \DateOfDeliver \tabularnewline
+		\hline 
+		OCENA: & DATA: & \multicolumn{3}{l|}{UWAGI}\tabularnewline
+		\hline \rowcolor{Gray}
+		{\makecell[l]{ \\ \\ \\ \\}}&  & \multicolumn{3}{l|}{}\tabularnewline
+		\hline 
+		\end{tabular}}
+	\end{table}
+% POCZĄTEK SPRAWOZDANIA
+
+\section{Informacje ogólne o projekcie}	
+Nazwa projektu: \textbf{pyqt-notepad}
+Skład zespołu:
+\begin{itemize}
+\item[-] Magdalena Machacka – lider projektu,
+\item[-] Piotr Kurdziel – lider techniczny,
+\item[-] Błażej Krasucki – dyrektor sprzedaży.
+\end{itemize}
+\section{Cel projektu}
+	Celem projektu jest stworzenie aplikacji notatnika przy wykorzystaniu języka Python i biblioteki PyQt oraz pokazanie umiejętności współpracy nad projektem przy wykorzystaniu narzędzi Git oraz Github. W ramach projektu należy pokazać umiejętność tworzenia, utrzymywania oraz naprawiania zmian w kodzie. 
+\section{Przebieg pracy}
+	\subsection{Utworzenie repozytorium}
+	Repozytorium utworzono za pomocą platformy \texttt{github.com}. Uczestnicy projektu sklonowali repozytorium, w celu współpracy, co zostało przedstawione na rysunku \ref{fig:gitclone}.
+	
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/git_clone}
+	\caption{Sklonowanie repozytorium utworzonego za pośrednictwem platformy Github}
+	\label{fig:gitclone}
+	\end{figure}
+	
+	
+	\subsection{Praca na branchach}
+	
+	\subsubsection{Branch sprawozdanie}
+	
+		\begin{lstlisting}[caption={Przejście na branch sprawozdanie}]
+remote: Total 5 (delta 1), reused 5 (delta 1), pack-reused 0 (from 0)
+Unpacking objects: 100% (5/5), 31.12 KiB | 3.11 MiB/s, done.
+From https://github.com/Organizacja-Przestepcza/pyqt-notepad
+* [new branch]      sprawozdanie -> origin/sprawozdanie
+Already up to date.
+(base) magda@mThinkPad-t480:~/Documents/Github/pyqt-notepad$ git branch 
+* main
+(base) magda@mThinkPad-t480:~/Documents/Github/pyqt-notepad$ git switch sprawozdanie 
+branch 'sprawozdanie' set up to track 'origin/sprawozdanie'.
+Switched to a new branch 'sprawozdanie'
+		\end{lstlisting}
+		
+		\begin{lstlisting}[caption={Dodanie plików sprawozdania i commit}]
+git add .
+(base) magda@mThinkPad-t480:\~{}/Documents/Github/pyqt-notepad\$ git status
+On branch sprawozdanie
+Your branch is up to date with 'origin/sprawozdanie'.
+
+Changes to be committed:
+(use ``git restore --staged <file>...'' to unstage)
+	new file:   docs/.gitignore
+	new file:   docs/image/ModLogoPO.jpg
+	new file:   docs/image/ModLogoWE.jpg
+	new file:   docs/image/logotyp-politechnika-opolska-01.jpg
+	renamed:    resources/images/git\_clone.png -> docs/images/git\_clone.png
+	new file:   docs/szablon\_lab.tex
+
+(base) magda@mThinkPad-t480:\~{}/Documents/Github/pyqt-notepad\$ git commit -m ``feat: add docs''
+		\end{lstlisting}
+		
+	\subsubsection{Branch base window}
+		
+	\subsection{Pull requesty i code review}
+	
+	W tej podsekcji przedstawiono proces akceptowania pull requestów oraz code review.
+	
+	\subsubsection{Pull request i code review brancha \texttt{feat: base window}}
+	
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/git_pull_request}
+	\caption{Pull request w serwisie \texttt{github.com}}
+	\label{fig:gitpullrequest}
+	\end{figure}
+	
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/git_code_review}
+	\caption{Code review przed merge request}
+	\label{fig:gitcodereview}
+	\end{figure}
+	
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/git_pull_request_after}
+	\caption{Zmergowany PR}
+	\label{fig:gitpullrequestafter}
+	\end{figure}
+	
+	\subsection{Konflikty i sposób rozwiązania}
+	
+	W tej podsekcji przedstawiono konflikty powstałe podczas pracy nad projektem. 
+	
+	Pierwszym konflikt przedstawiono na rysunku \ref{fig:gitsimpleconflict}. Problem polegał na niezgodności commitów przed próbą pushowania własnych zmian.
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/git_simple_conflict}
+	\caption{Konflikt commitów}
+	\label{fig:gitsimpleconflict}
+	\end{figure}
+	
+	Problem rozwiązano za pomocą polecenie \texttt{git pull --rebase}, a następnie wykonano \texttt{git push}. 
+	
+	
+	\subsection{Reakcja na zmianę wprowadzoną przez prowadzącego}
+	\subsection{Utworzenie wersji (tagów)}
+	
+\section{Opis programu w Pythonie}
+	\subsection{Funkcjonalności}
+	\subsection{Sposób uruchomienia}
+	\subsection{Wymagania}
+
+\section{Podsumowanie współpracy}
+	
+	
+\end{document}	
