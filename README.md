@@ -1,1 +1,1 @@
-# Simple notepad in pyqt
+## Simple notepad in pyqt
