@@ -142,7 +142,17 @@ Please make sure to update tests as appropriate.
 [MIT](https://choosealicense.com/licenses/mit/)
 \end{lstlisting}
 		
-	\subsubsection{Branch base window}
+\subsubsection{Branch main}
+
+\texttt{main} to główna gałąź projektu, do której mergowane są pullrequesty po code review. Rysunek \ref{fig:main} przedstawia fragment gałęzi z commitami.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{image/main}
+\caption{Commity na głównej gałęzi projektu}
+\label{fig:main}
+\end{figure}
+
 		
 	\subsection{Pull requesty i code review}
 	
@@ -171,6 +181,7 @@ Please make sure to update tests as appropriate.
 	\label{fig:gitpullrequestafter}
 	\end{figure}
 	
+	
 	\subsection{Konflikty i sposób rozwiązania}
 	
 	W tej podsekcji przedstawiono konflikty powstałe podczas pracy nad projektem. 
@@ -187,14 +198,83 @@ Please make sure to update tests as appropriate.
 	
 	
 	\subsection{Reakcja na zmianę wprowadzoną przez prowadzącego}
+	Rysunek \ref{fig:gitinterruption} przedstawia reakcję na zmianę wprowadzoną przez prowadzącego.
+	
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{image/git_interruption}
+\caption{Reakcja na zmianę wprowadzoną przez prowadzącego}
+\label{fig:gitinterruption}
+\end{figure}
+
+Aby rozwiązać problem ustawiono prawidłową wartość atrybutów oraz dodano usunięte wywołanie funcji \texttt{main}.
+	
 	\subsection{Utworzenie wersji (tagów)}
 	
+	Dodano tag \texttt{v0.1}, widoczny na rysunku \ref{fig:tag}.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{image/tag}
+\caption{Tag}
+\label{fig:tag}
+\end{figure}
+	
 \section{Opis programu w Pythonie}
+W tej sekcji przedstawiono opis programu wraz z jego funkcjonalnościami, sposobem uruchomienia i wymaganiami.
 	\subsection{Funkcjonalności}
+	Do funkcjonalności notatnika należy: 
+	\begin{itemize}
+	\item[-] otwieranie plików,
+	\item[-] zapisywanie plików,
+	\item[-] wypisywanie ilości znaków i linii.,
+	\item[-] wyszukiwanie ciągów znaków w tekście.
+	\end{itemize}
+	
 	\subsection{Sposób uruchomienia}
+	Aby uruchomić aplikację należy zainstalować wymagane biblioteki z pliku \texttt{requirements.txt}, szczegółowa instrukcja znajduje się w pliku \texttt{README.md}, a następnie uruchomić plik \texttt{main.py}.
 	\subsection{Wymagania}
+	
+	Wymagania przedstawiono w pliku \texttt{requirements.txt} dostępnym na stronie repozytorium.
 
 \section{Podsumowanie współpracy}
+
+\subsection{Refleksje uczestników projektu}
+
+\textbf{Piotr:}
+
+\hspace{1cm}	„Za mało czasu, żeby się takimi rzeczami bawić. W 3 godziny Github jest za wolny do mergowania konfliktów, a było ich dużo.”
 	
+
+\textbf{Magda:}
+
+\hspace{1cm}	„Nie wiem w co mam ręce włożyć. Git to nie problem, ale jeszcze sprawozdanie robię (T\_T)”
+	
+
+\textbf{Błażej:}
+
+\hspace{1cm}	„Mam jakiś error jak pulluję brancha.”
+
+\textit{*Przez przypadek usunął wszystko*}
+
+\subsection{Podsumowanie statystyk:}
+
+W tym podrozdziale przedstawiono podsumowanie statystyk.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{image/contributors}
+\caption{Contributors}
+\label{fig:contributors}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{image/network}
+\caption{Spahetti}
+\label{fig:network}
+\end{figure}
+
+
+
 	
 \end{document}	
