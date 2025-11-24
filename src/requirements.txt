@@ -1,2 +1,4 @@
 pyqt6-sip
+pyqt6
 qtwidgets
+qtgui
