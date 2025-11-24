@@ -13,8 +13,8 @@
 	left=20mm,
 	top=20mm,
 }
-\usepackage{lstlisting}
-
+\usepackage{listings}
+\usepackage{float}
 % TABELA
 \usepackage{multirow}
 \usepackage{graphicx}
@@ -34,11 +34,11 @@
 
 
 % TYTUŁ, DATY ORAZ DANE OSOBY OPRACOWUJĄCEJ SPRAWOZDANIE
-\def\AuthorFirstName{MARCIN}
-\def\AuthorLastName{KOWOL}
-\def\Title{Zapoznanie z zasadami bezpieczeństwa obowiązującymi \\w laboratorium, potwierdzenie odbycia instruktażu. \\ Wprowadzenie do LV, instalacja urządzeń,\\ Nawigacja w LabVIEW.}
-\def\DateOfExecution{2024-10-01}
-\def\DateOfDeliver{2024-10-08}
+\def\AuthorFirstName{\uppercase{Magdalena}}
+\def\AuthorLastName{\uppercase{Machacka}}
+\def\Title{ \\ Praca z git i github\\ \\ }
+\def\DateOfExecution{2025-11-24}
+\def\DateOfDeliver{2025-11-24}
 %
 %
 \begin{document}	
@@ -73,14 +73,24 @@
 Nazwa projektu: \textbf{pyqt-notepad}
 Skład zespołu:
 \begin{itemize}
-\item Magdalena Machacka – lider projektu,
-\item Piotr Kurdziel – lider techniczny,
-\item Błażej Krasucki – dyrektor sprzedaży.
+\item[-] Magdalena Machacka – lider projektu,
+\item[-] Piotr Kurdziel – lider techniczny,
+\item[-] Błażej Krasucki – dyrektor sprzedaży.
 \end{itemize}
 \section{Cel projektu}
-	
+	Celem projektu jest stworzenie aplikacji notatnika przy wykorzystaniu języka Python i biblioteki PyQt oraz pokazanie umiejętności współpracy nad projektem przy wykorzystaniu narzędzi Git oraz Github. W ramach projektu należy pokazać umiejętność tworzenia, utrzymywania oraz naprawiania zmian w kodzie. 
 \section{Przebieg pracy}
 	\subsection{Utworzenie repozytorium}
+	Repozytorium utworzono za pomocą platformy \texttt{github.com}. Uczestnicy projektu sklonowali repozytorium, w celu współpracy, co zostało przedstawione na rysunku \ref{fig:gitclone}.
+	
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/git_clone}
+	\caption{Sklonowanie repozytorium utworzonego za pośrednictwem platformy Github}
+	\label{fig:gitclone}
+	\end{figure}
+	
+	
 	\subsection{Praca na branchach}
 	\subsubsection{Branch sprawozdanie}
 		\begin{lstlisting}[caption={Przejście na branch sprawozdanie}]
