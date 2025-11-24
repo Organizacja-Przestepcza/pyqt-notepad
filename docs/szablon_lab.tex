@@ -155,10 +155,21 @@ Changes to be committed:
 	\label{fig:gitpullrequestafter}
 	\end{figure}
 	
-	
-	
-	
 	\subsection{Konflikty i sposób rozwiązania}
+	
+	W tej podsekcji przedstawiono konflikty powstałe podczas pracy nad projektem. 
+	
+	Pierwszym konflikt przedstawiono na rysunku \ref{fig:gitsimpleconflict}. Problem polegał na niezgodności commitów przed próbą pushowania własnych zmian.
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/git_simple_conflict}
+	\caption{Konflikt commitów}
+	\label{fig:gitsimpleconflict}
+	\end{figure}
+	
+	Problem rozwiązano za pomocą polecenie \texttt{git pull --rebase}, a następnie wykonano \texttt{git push}. 
+	
+	
 	\subsection{Reakcja na zmianę wprowadzoną przez prowadzącego}
 	\subsection{Utworzenie wersji (tagów)}
 	
