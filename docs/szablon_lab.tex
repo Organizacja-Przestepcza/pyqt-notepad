@@ -13,6 +13,8 @@
 	left=20mm,
 	top=20mm,
 }
+\usepackage{lstlisting}
+
 % TABELA
 \usepackage{multirow}
 \usepackage{graphicx}
@@ -80,6 +82,38 @@ Skład zespołu:
 \section{Przebieg pracy}
 	\subsection{Utworzenie repozytorium}
 	\subsection{Praca na branchach}
+	\subsubsection{Branch sprawozdanie}
+		\begin{lstlisting}[caption={Przejście na branch sprawozdanie}]
+remote: Total 5 (delta 1), reused 5 (delta 1), pack-reused 0 (from 0)
+Unpacking objects: 100% (5/5), 31.12 KiB | 3.11 MiB/s, done.
+From https://github.com/Organizacja-Przestepcza/pyqt-notepad
+* [new branch]      sprawozdanie -> origin/sprawozdanie
+Already up to date.
+(base) magda@mThinkPad-t480:~/Documents/Github/pyqt-notepad$ git branch 
+* main
+(base) magda@mThinkPad-t480:~/Documents/Github/pyqt-notepad$ git switch sprawozdanie 
+branch 'sprawozdanie' set up to track 'origin/sprawozdanie'.
+Switched to a new branch 'sprawozdanie'
+		\end{lstlisting}
+		
+		\begin{lstlisting}[caption={Dodanie plików sprawozdania i commit}]
+git add .
+(base) magda@mThinkPad-t480:\~{}/Documents/Github/pyqt-notepad\$ git status
+On branch sprawozdanie
+Your branch is up to date with 'origin/sprawozdanie'.
+
+Changes to be committed:
+(use ``git restore --staged <file>...'' to unstage)
+	new file:   docs/.gitignore
+	new file:   docs/image/ModLogoPO.jpg
+	new file:   docs/image/ModLogoWE.jpg
+	new file:   docs/image/logotyp-politechnika-opolska-01.jpg
+	renamed:    resources/images/git\_clone.png -> docs/images/git\_clone.png
+	new file:   docs/szablon\_lab.tex
+
+(base) magda@mThinkPad-t480:\~{}/Documents/Github/pyqt-notepad\$ git commit -m ``feat: add docs''
+		\end{lstlisting}
+		
 	\subsection{Pull requesty i code review}
 	\subsection{Konflikty i sposób rozwiązania}
 	\subsection{Reakcja na zmianę wprowadzoną przez prowadzącego}
