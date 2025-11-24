@@ -1,5 +1,5 @@
 import sys
-from PyQt6.QtWidgets import QMainWindow, QApplication
+from PyQt6.QtWidgets import QMainWindow, QApplication, QTextEdit
 
 
 class MainWindow(QMainWindow):
@@ -7,6 +7,9 @@ class MainWindow(QMainWindow):
         super().__init__()
         self.setWindowTitle("Notepad")
         self.setGeometry(100, 100, 800, 600)
+
+        self.text_edit = QTextEdit(self)
+        self.setCentralWidget(self.text_edit)
 
 
 def main():
